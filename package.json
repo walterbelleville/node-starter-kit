@@ -1,7 +1,7 @@
 {
   "name": "node_starter_kit",
   "version": "0.0.1",
-  "description": "A starter templete for your node.js projects.",
+  "description": "A starter template for your node.js projects.",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/test.js"
@@ -15,6 +15,7 @@
     "prettier": "1.17.1"
   },
   "dependencies": {
-    "react": "^16.8.6"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
