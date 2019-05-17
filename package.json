@@ -1,0 +1,20 @@
+{
+  "name": "node_starter_kit",
+  "version": "0.0.1",
+  "description": "A starter templete for your node.js projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/test.js"
+  },
+  "author": "Walter Belleville",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.4",
+    "prettier": "1.17.1"
+  },
+  "dependencies": {
+    "react": "^16.8.6"
+  }
+}
