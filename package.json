@@ -1,20 +1,35 @@
 {
-  "name": "node_starter_kit",
+  "name": "react_nodejs_starter_kit",
   "version": "0.0.1",
   "description": "A starter template for your node.js projects.",
-  "main": "index.js",
   "scripts": {
+    "start": "node server/server.js",
+    "clear-build-cache": "rm -rf .cache/ dist/",
+    "format": "prettier --write \"view/**/*.{js,jsx}\"",
+    "lint": "eslint \"view/**/*.{js,jsx}\" --quiet",
+    "dev": "parcel index.html",
+    "dev:mock": "cross-env LIST_MOCK=mock parcel index.html",
     "test": "mocha tests/test.js"
   },
   "author": "Walter Belleville",
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^5.16.0",
     "mocha": "^6.1.4",
-    "prettier": "1.17.1"
+    "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.12.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.0.2",
+    "parcel-bundler": "^1.12.1",
+    "prettier": "^1.16.1"
   },
   "dependencies": {
+    "@reach/router": "^1.2.1",
+    "express": "^4.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
