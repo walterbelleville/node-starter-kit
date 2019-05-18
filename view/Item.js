@@ -1,15 +1,24 @@
 import React from "react";
 
-const Item = props => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.status),
-    React.createElement("h2", {}, props.notes),
-    React.createElement("h2", {}, props.due),
-    React.createElement("h2", {}, props.createdBy),
-    React.createElement("h2", {}, props.list),
-    React.createElement("h2", {}, props.timestamps)
-  ]);
-};
+class Item extends React.Component {
+  render() {
+    const items = items.item[0];
+    return (
+      <div className='ui unstackable items'>
+        <Item
+          id={items.id}
+          name={items.name}
+          description={items.description}
+          status={items.status}
+          notes={items.notes}
+          due={items.due}
+          createdBy={items.createdBy}
+          list={items.list}
+          timestamps={items.timestamps}
+      />
+    </div>
+  );
+ }
+}
 
-export default List;
+export default Item;

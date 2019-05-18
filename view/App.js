@@ -1,30 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import List from './List';
+import Item from './Item';
 
 const App = () => {
     return React.createElement('div', {}, [
         React.createElement('h1', {}, 'List'),
         React.createElement(List, {
-            name: 'Walk dog',
-            description: 'Walk the dog',
-            createdBy: 'Walter',
-            timestamps: '12:00 pm'
+            name: name,
+            description: description,
+            note: note,
+            due: due,
+            createdBy: createdBy,
+            timestamps: timestamps
         }),
         React.createElement(List, {
-            name: 'Walk dog',
-            description: 'Walk the dog',
-            createdBy: 'Walter',
-            timestamps: '12:00 pm'
+            name: name,
+            description: description,
+            note: note,
+            due: due,
+            createdBy: createdBy,
+            timestamps: timestamps
         }),
         React.createElement(Item, {
-            name: 'Walk dog',
-            status: 'Walk the dog',
-            notes: 'Walter',
-            due: '12:00 pm',
-            createdBy: 'Walter',
-            list: '',
-            timestamps: ''
+            name: name,
+            description: description,
+            status: status,
+            notes: notes,
+            due: due,
+            createdBy: createdBy,
+            list: list,
+            timestamps: timestamps
         }),
     ]);
 };

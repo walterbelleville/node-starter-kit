@@ -2,6 +2,11 @@ import mongoose from 'mongoose'
 
 const listSchema = new mongoose.Schema(
   {
+    id: {
+      type: Number,
+      required: true,
+      maxlength: 100,
+    },
     name: {
       type: String,
       required: true,

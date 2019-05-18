@@ -1,12 +1,23 @@
 import React from "react";
 
-const List = props => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.description),
-    React.createElement("h2", {}, props.createdBy),
-    React.createElement("h2", {}, props.timestamps)
-  ]);
-};
+class List extends React.Component {
+  render() {
+    const lists = lists.list[0];
+    return (
+      <div className='ui unstackable lists'>
+        <list
+          id={lists.id}
+          name={lists.name}
+          description={lists.description}
+          note={lists.note}
+          due={lists.due}
+          createdBy={lists.createdBy}
+          list={lists.list}
+          timestamps={lists.timestamps}
+      />
+    </div>
+  );
+ }
+}
 
 export default List;
