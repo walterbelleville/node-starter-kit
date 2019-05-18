@@ -5,9 +5,18 @@
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "prettier",
-    "prettier/react"
+    "prettier/react",
+    "plugin:jest/recommended"
   ],
   "rules": {
+    "promise/catch-or-return": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": false
+      }
+    ],
     "react/prop-types": 0,
     "react-hooks/rules-of-hooks": "error",
     "no-console": "warn"

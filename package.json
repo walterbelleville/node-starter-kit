@@ -3,13 +3,19 @@
   "version": "0.0.1",
   "description": "A starter template for your node.js projects.",
   "scripts": {
-    "start": "node server/server.js",
+    "build": "babel src --out-dir dist",
+    "start": "node dist/index.js",
     "clear-build-cache": "rm -rf .cache/ dist/",
     "format": "prettier --write \"view/**/*.{js,jsx}\"",
     "lint": "eslint \"view/**/*.{js,jsx}\" --quiet",
-    "dev": "parcel index.html",
     "dev:mock": "cross-env LIST_MOCK=mock parcel index.html",
-    "test": "mocha tests/test.js"
+    "test": "NODE_ENV=testing jest --forceExit --detectOpenHandles  --silent",
+    "test-routes": "npm test -t router",
+    "test-models": "npm test -t model",
+    "test-controllers": "npm test -t controllers",
+    "test-auth": "npm test -t Authentication:",
+    "dev": "nodemon --exec npm restart",
+    "restart": "rimraf dist && npm build && npm start",
   },
   "author": "Walter Belleville",
   "license": "MIT",
@@ -25,12 +31,52 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.0.2",
     "parcel-bundler": "^1.12.1",
-    "prettier": "^1.16.1"
+    "prettier": "^1.16.1",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "jest": "^23.6.0",
+    "mock-req-res": "^1.0.2",
+    "nodemon": "^1.18.3",
+    "rimraf": "^2.6.2",
+    "supertest": "^3.3.0"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
     "express": "^4.17.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "bcrypt": "^3.0.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "cuid": "^2.1.4",
+    "dotenv": "^6.1.0",
+    "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.13",
+    "morgan": "^1.9.1",
+    "validator": "^10.9.0"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/",
+    "testEnvironment": "node",
+    "setupTestFrameworkScriptFile": "<rootDir>/test-db-setup.js",
+    "testPathIgnorePatterns": [
+      "dist/"
+    ],
+    "restoreMocks": true
   }
 }

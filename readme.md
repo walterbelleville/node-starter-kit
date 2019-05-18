@@ -1,1 +1,1 @@
-A starter template for your node.js and react projects.
+A starter template for your node.js api and react projects.
