@@ -1,0 +1,1 @@
+A starter template for your node.js and react projects.
