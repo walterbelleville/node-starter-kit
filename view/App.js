@@ -17,11 +17,14 @@ const App = () => {
             createdBy: 'Walter',
             timestamps: '12:00 pm'
         }),
-        React.createElement(List, {
+        React.createElement(Item, {
             name: 'Walk dog',
-            description: 'Walk the dog',
+            status: 'Walk the dog',
+            notes: 'Walter',
+            due: '12:00 pm',
             createdBy: 'Walter',
-            timestamps: '12:00 pm'
+            list: '',
+            timestamps: ''
         }),
     ]);
 };

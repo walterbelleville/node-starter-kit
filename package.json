@@ -15,7 +15,7 @@
     "test-controllers": "npm test -t controllers",
     "test-auth": "npm test -t Authentication:",
     "dev": "nodemon --exec npm restart",
-    "restart": "rimraf dist && npm build && npm start",
+    "restart": "rimraf dist && npm build && npm start"
   },
   "author": "Walter Belleville",
   "license": "MIT",
