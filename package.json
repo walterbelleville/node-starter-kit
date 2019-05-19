@@ -4,7 +4,7 @@
   "description": "A starter template for your node.js projects.",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "start": "node dist/index.js",
+    "start": "node index.js",
     "clear-build-cache": "rm -rf .cache/ dist/",
     "format": "prettier --write \"view/**/*.{js,jsx}\"",
     "lint": "eslint \"view/**/*.{js,jsx}\" --quiet",
